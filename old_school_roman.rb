@@ -6,10 +6,7 @@ def old_school_roman num
 		resi = resi%100
 		dec = resi/10
 		uni = resi%10
-		puts
-		print "#{mil} #{cen} #{dec} #{uni}"
-		puts
-		puts
+		"M"*(mil) + "D"*(cen/5) + "C"*(cen%5) + "L"*(dec/5) + "X"*(dec%5) + "V"*(uni/5) + "I"*(uni%5)
 	else
 		"Numero por fuera del rango!"
 	end
@@ -18,4 +15,7 @@ end
 print "Digite numero para convertir en romano entre 1 y 3000 :"
 numero = gets.chomp.to_i
 
-prueba = old_school_roman (numero)
+roman_number = old_school_roman (numero)
+
+puts roman_number
+puts
